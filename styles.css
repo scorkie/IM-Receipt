@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.invoice-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 80px;
+}
+
+.invoice-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #304b78;
+    text-align: right;
+}
+
+.invoice-date {
+    text-align: right;
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.invoice-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.invoice-number {
+    font-size: 16px;
+    color: #333;
+}
+
+.client-info {
+    text-align: right;
+    font-size: 15px;
+    color: #333;
+}
+
+.client-info a {
+    color: #4a54a8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.client-info a:hover {
+    text-decoration: underline;
+}
+
+.client-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.dentist-name, .patient-name {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.invoice-table th {
+    background-color: white;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+}
+
+.invoice-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.item-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.totals {
+    width: 300px;
+    margin-left: auto;
+    font-size: 14px;
+}
+
+.subtotal-row, .tax-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.grand-total {
+    display: flex;
+    justify-content: space-between;
+    background-color: #304b78;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.print {
+    display: inline;
+    justify-content: left;
+    background-color: #304b78;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .invoice-container {
+        padding: 20px;
+    }
+    
+    .invoice-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .invoice-date, .invoice-title {
+        text-align: left;
+    }
+    
+    .invoice-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .client-info {
+        text-align: left;
+    }
+    
+    .totals {
+        width: 100%;
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .print-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .print-button button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyTeeth Receipt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div>
+                <img src="Images/v2Landscape Clinic Logo.png" alt="HappyTeeth Clinic Logo" class="logo">
+            </div>
+            <div>
+                <div class="invoice-title">INVOICE</div>
+                <div class="invoice-date" id="invoice-date"></div>
+            </div>
+        </div>
+        
+        <div class="invoice-info">
+            <div class="invoice-number">
+                INVOICE NO: <span id="invoice-number"></span>
+            </div>
+            <div class="client-info">
+                <div class="client-title">TO</div>
+                <a href="https://www.facebook.com/cascabelpacquingdentalclinic" target="_blank">Facebook</a>
+                <div id="client-address1">Toril, Davao City</div>
+                <div id="client-address2">Philippines</div>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="dentist-name"><strong>Dentist:</strong> Dr. Cascabel</div>
+            <div class="patient-name"><strong>Patient:</strong> Keian Renheart Mar</div>
+        </div>
+        
+        
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>QTY</th>
+                    <th>DESCRIPTION</th>
+                    <th>PRICE</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="invoice-items">
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <div>Dental Cleaning</div>
+                        <div class="item-description">Professional teeth cleaning and polishing</div>
+                    </td>
+                    <td>₱750.00</td>
+                    <td>₱</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <div>Dental X-Ray</div>
+                        <div class="item-description">Digital panoramic x-ray imaging</div>
+                    </td>
+                    <td>₱235.00</td>
+                    <td>₱5</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <div>Veneers</div>
+                        <div class="item-description">Conceal front teeth</div>
+                    </td>
+                    <td>₱950.00</td>
+                    <td>₱</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="totals">
+            <div class="subtotal-row">
+                <div>Sub Total</div>
+                <div id="subtotal">₱</div>
+            </div>
+            <div class="tax-row">
+                <div>Tax 10%</div>
+                <div id="tax">₱</div>
+            </div>
+            <div class="grand-total">
+                <div>GRAND TOTAL:</div>
+                <div id="grand-total">₱</div>
+            </div>
+        </div>
+
+        <div class="print">
+            <button onclick="window.print()">Print Invoice</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
