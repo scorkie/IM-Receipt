@@ -25,10 +25,15 @@ function calculateTotals() {
 //update date to current date
 function updateDate() {
     const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+    
+    const formattedDate = today.toLocaleDateString('en-US', dateOptions);
+    const formattedTime = today.toLocaleTimeString('en-US', timeOptions);
+    
     const dateElement = document.getElementById('invoice-date');
     if (dateElement) {
-        dateElement.textContent = today.toLocaleDateString('en-US', options);
+        dateElement.textContent = `${formattedDate} ${formattedTime}`;
     } else {
         console.error("Invoice date element not found!");
     }

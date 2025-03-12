@@ -136,6 +136,7 @@ body {
     justify-content: left;
     background-color: #304b78;
     padding: 10px;
+    font-weight: bold;
 }
 
 button {
